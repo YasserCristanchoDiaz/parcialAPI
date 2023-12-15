@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishes API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>DISHES</h1>
+    
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Add Dish</h3>
+            </div>
+            <div class="card-body">
+                <form id="newDishForm">
+                    <div class="form-group">
+                        <label for="dishId">ID:</label>
+                        <input type="number" class="form-control" id="idName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dishName">Name:</label>
+                        <input type="text" class="form-control" id="dishName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calories">Calories:</label>
+                        <input type="number" class="form-control" id="calories" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isVegetarian">Vegetarian</label>
+                        <select class="form-control" id="isVegetarian" required>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="value">Value:</label>
+                        <input type="number" class="form-control" id="value" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <textarea class="form-control" id="comments"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Save</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Dishes</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <H5>Details</H5>
+                    <table class="table table-success table-striped" id="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">IdDish</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Calories</th>
+                                <th scope="col">Vegetarian</th>
+                                <th scope="col">Value</th>
+                                <th scope="col">Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
